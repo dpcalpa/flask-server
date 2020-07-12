@@ -8,5 +8,6 @@ spec:
     - port: 5000
       protocol: TCP
       targetPort: 5000
+      nodePort: 30036
     selector:
         app: test-app
