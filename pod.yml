@@ -1,0 +1,10 @@
+apyVersion: v1
+kind: Pod
+metadata:
+	name: pod-test
+spec:
+	containers:
+	- name: nombre-container
+	  image: python-app:latest
+	  ports:
+	  - containerPort: 80
