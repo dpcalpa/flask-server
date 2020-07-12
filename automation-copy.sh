@@ -1,7 +1,5 @@
 #!/bin/bash
 DOCKER="python-app"
-DATE=$(date +"%Y-%m-%d %H:%M:%S")
-echo "DATE: $DATE"
 echo "---------------------- git status"
 git status
 echo "---------------------- git add --all"
