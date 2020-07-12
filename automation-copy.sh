@@ -2,10 +2,11 @@
 DOCKER="python-app"
 DATE=$(date +"%Y-%m-%d %H:%M:%S")
 echo "DATE: $DATE"
-git status
 echo "---------------------- git status"
-git add --all
+git status
 echo "---------------------- git add --all"
-git commit -m “d”
+git add --all
 echo "---------------------- git commit -m"
+git commit -m “`date`”
+echo "---------------------- git push"
 git push
