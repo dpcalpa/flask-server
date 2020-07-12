@@ -7,6 +7,6 @@ git status
 echo "---------------------- git add --all"
 git add --all
 echo "---------------------- git commit -m"
-git commit -m “`date`”
+git commit -m "`date +\"%Y-%m-%d\"`"
 echo "---------------------- git push"
-git push
+git push 
