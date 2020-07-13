@@ -26,17 +26,9 @@ echo "BUILD done"
 docker container ls
 
 #Apply Kubernetes configuration
-#kubectl delete -f yaml-config/
 kubectl apply -f yaml-config/
-echo "KUB applied"
+echo "KUBERNETES CONFIGURATION applied"
 kubectl get all
 
-#curl localhost:30036/health
-
-
-#TOKEN=$(aws ecr get-login-password --region $REGION | docker login --username AWS --password-stdin "$ACCT_ID.dkr.ecr.$REGION.amazonaws.com")
-#echo "TOKEN: $TOKEN"
-#TAG=$(docker tag $DOCKER:latest $ACCT_ID.dkr.ecr.$REGION.amazonaws.com/$DOCKER:latest)
-#echo "TAG: $TAG"
-#docker push $ACCT_ID.dkr.ecr.$REGION.amazonaws.com/$DOCKER:latest
-#echo "PUSHED"
+echo "Test app with: curl -ikL http://localhost/home"
+echo "Test app with: curl -ikL http://localhost/health"

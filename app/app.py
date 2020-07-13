@@ -17,6 +17,3 @@ def health():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
-
-def hello(name):
-    return "Happy testing! "+name
