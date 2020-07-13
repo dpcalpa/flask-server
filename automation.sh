@@ -18,7 +18,7 @@ git push origin master
 #Get to repository? Clone, download?
 
 #Make unit tests to app.py
-python app/test.py
+python app/tests/test.py
 
 #Make docker build to get image python-app:latest
 docker build -t $DOCKER:latest .
