@@ -8,8 +8,6 @@
 
 DOCKER="python-app"
 
-#Clone repository
-git clone https://github.com/dpcalpa/flask-server.git
 
 #Install dependencies locally assuming you have Mac machine and brew installed
 #Python 

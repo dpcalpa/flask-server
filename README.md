@@ -69,6 +69,11 @@ if __name__ == "__main__":
 ### 2. Enter directory to save the project
 
 Open a terminal and position yourself on the directory in which you want to locally save the project. 
+- Copy and paste the following command: 
+```bash
+git clone https://github.com/dpcalpa/flask-server.git
+cd flask-server
+```
 
 ### 3. Run automated deployment script
 
