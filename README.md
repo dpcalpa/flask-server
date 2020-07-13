@@ -17,8 +17,8 @@ The deployment of the application is made in three main steps, automated in one 
 
 > Out of scope
 
-Helm deployment wasn't successfull. I have troubles configuring my ingress controller, so that I was only capable of consuming the application through a nodePort service, but it wasn't what it was expected.
-Helm solution's repository is: https://github.com/dpcalpa/helm-k8s-flask-server.git . However, it is clear that it is only working using a dynamic port as an output from NodePort's service deployment.
+Helm complete's deployment wasn't successfull. I have troubles configuring my ingress controller, so that I was only capable of consuming the application through a nodePort service, but it wasn't what it was expected.
+Helm solution's repository is: https://github.com/dpcalpa/helm-k8s-flask-server.git . However, it is clear that it is only working using a fixed port '30500' as an output from NodePort's service deployment.
 
 ---
 
@@ -71,7 +71,7 @@ Open a terminal and position yourself on the directory in which you want to loca
 
 ### 3. Run automated deployment script
 
-Run the deployment script, https://github.com/dpcalpa/flask-server/blob/master/automation.sh. For this you need to run the following command:
+Run the deployment script, automation.sh. For this you need to run the following command:
 
 
 ```bash
@@ -89,7 +89,8 @@ $ sh automation.sh
 ## FAQ
 
 - **If you needed to put this service into production, what do you think it may be missing? What would you add to it given more time?**
-    - No problem! Just do this.
-    - B
+    - Using nodePort is not recommended to be implemented as solution on a production environment, hence it is recomended to use INGRESS as a main solution. So that, with more time, I would complete ingress configuration with an nginx load balancer.
+    - LoadBalancer's service type isn't the right way also, because it increase costs when plugging into a cloud provider or external load balancer.
+    - Secrets and ConfigMap would be a better solution to manage information across nodes.
 
 ---
