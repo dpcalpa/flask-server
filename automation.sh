@@ -42,3 +42,5 @@ echo "Test app with: curl -ikL http://localhost/home"
 curl -ikL http://localhost/home
 echo "Test app with: curl -ikL http://localhost/health"
 curl -ikL http://localhost/health
+
+echo "When finishing your local manual tests, please delete the deployment: kubectl delete -f yaml-config/"
