@@ -1,19 +1,17 @@
 apiVersion: networking.k8s.io/v1beta1
+#apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: python-app-uri
+  name: my-ingress-uri
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: testk8s.com
-    http:
+  #- host: testk8s.com
+  - http:
       paths:
-      - path: /health
+      - path: /home #/*
         backend:
-          serviceName: users-api
-          servicePort: 4200
-      - path: /home
-        backend:
-          serviceName: payments-api
-          servicePort: 8080
+          serviceName: clusterip-test-name
+          servicePort: 5000
+

@@ -7,8 +7,7 @@ print(__name__)
 @app.route("/")
 def index():
     return """
-    <h1>Python Flask in Docker!</h1>
-    <p>A sample web-app for running Flask inside Docker.</p>
+    <h1>Python Flask in K8s!</h1>
     """
 @app.route("/health")
 def health():
@@ -18,3 +17,6 @@ def health():
 
 if __name__ == "__main__":
     app.run(debug=True, host='0.0.0.0')
+
+def hello(name):
+    return "Happy testing! "+name
