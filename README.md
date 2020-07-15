@@ -75,6 +75,13 @@ git clone https://github.com/dpcalpa/flask-server.git
 cd flask-server
 ```
 
+After, install the nginx ingress controller running this command: 
+
+```bash
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.34.0/deploy/static/provider/cloud/deploy.yaml 
+
+```
+
 ### 3. Run automated deployment script
 
 Run the deployment script, automation.sh. For this you need to run the following command:
